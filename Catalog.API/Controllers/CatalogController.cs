@@ -11,5 +11,6 @@ namespace Catalog.API.Controllers
     [ApiController]
     public class CatalogController : ControllerBase
     {
+        
     }
 }
