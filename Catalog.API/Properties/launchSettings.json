@@ -12,16 +12,16 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "Swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "Catalog.API": {
       "commandName": "Project",
-      "workingDirectory": "swagger",
+      "workingDirectory": "Swagger",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "Catalog",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
