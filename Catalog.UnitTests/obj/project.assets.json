@@ -1962,6 +1962,19 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Catalog.API/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Catalog.API.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Catalog.API.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -6561,10 +6574,16 @@
         "xunit.runner.visualstudio.2.4.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Catalog.API/1.0.0": {
+      "type": "project",
+      "path": "../Catalog.API/Catalog.API.csproj",
+      "msbuildProject": "../Catalog.API/Catalog.API.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Catalog.API >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "coverlet.collector >= 1.0.1",
       "xunit >= 2.4.0",
@@ -6601,7 +6620,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\GCP\\Microservices\\CatalogService\\Catalog.API\\Catalog.API.csproj": {
+              "projectPath": "D:\\GCP\\Microservices\\CatalogService\\Catalog.API\\Catalog.API.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -6641,6 +6664,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
