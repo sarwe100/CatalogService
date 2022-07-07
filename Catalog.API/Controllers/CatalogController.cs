@@ -67,7 +67,7 @@ namespace Catalog.API.Controllers
             var items = await _repository.GetProductByName(name);
             if (items == null)
             {
-                _logger.LogError($"Products with : {name} not found in data");
+                _logger.LogError($"Products with : {name} not found");
                 return NotFound();
             }
             return Ok(items);
