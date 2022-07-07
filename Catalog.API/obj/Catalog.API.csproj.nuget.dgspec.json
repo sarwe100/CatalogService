@@ -50,10 +50,6 @@
               "target": "Package",
               "version": "[3.1.2, )"
             },
-            "AspNetCore.HealthChecks.UI.Client": {
-              "target": "Package",
-              "version": "[3.1.2, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.0, )"
