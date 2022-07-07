@@ -8,7 +8,7 @@ COPY ["Catalog.API/Catalog.API.csproj", "Catalog.API/"]
 RUN dotnet restore "Catalog.API/Catalog.API.csproj"
 COPY . .
 WORKDIR "/app/Catalog.API"
-RUN dotnet build "Catalog.API.csproj" -c Release -o /app/build
+RUN dotnet build "Catalog.API/Catalog.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "Catalog.API/Catalog.API.csproj" -c Release -o /app/publish
