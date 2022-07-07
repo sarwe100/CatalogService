@@ -12,7 +12,8 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-alpine AS runtime
 WORKDIR /app
 
 FROM build AS publish
-RUN dotnet publish "app/Catalog.API" -c Release -o /app/publish
+WORKDIR "/app/Catalog.API"
+RUN dotnet publish  -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
