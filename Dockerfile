@@ -4,8 +4,8 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 EXPOSE 80
 
-COPY ["Catalog.API/Catalog.API.csproj", ".src/Catalog.API/"]
-RUN dotnet restore "Catalog.API/Catalog.API.csproj"
+COPY ["CatalogService/Catalog.API/Catalog.API.csproj", ".src/Catalog.API/"]
+RUN dotnet restore "CatalogService/Catalog.API/Catalog.API.csproj"
 COPY . .
 WORKDIR "app/src/Catalog.API"
 RUN dotnet build "Catalog.API.csproj" -c Release -o /app/build
