@@ -1,8 +1,8 @@
 
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 
 COPY ["Catalog.API/Catalog.API.csproj", "Catalog.API/"]
@@ -11,7 +11,7 @@ COPY . .
 WORKDIR "/src/Catalog.API"
 RUN dotnet build "Catalog.API.csproj" -c Release -o /app/build
 
-FROM build AS publis
+FROM build AS publish
 RUN dotnet publish  "Catalog.API.csproj" -c Release -o /app
 
 FROM base AS final
