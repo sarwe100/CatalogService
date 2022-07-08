@@ -17,7 +17,7 @@ namespace Catalog.API.Controllers
     {
         private readonly IProductRepository _repository;
         private readonly ILogger<CatalogController> _logger;
-        private readonly ICollection<Product> _prodlist;
+        //private readonly ICollection<Product> _prodlist;
         public CatalogController(IProductRepository repository, ILogger<CatalogController> logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
@@ -67,7 +67,7 @@ namespace Catalog.API.Controllers
             var items = await _repository.GetProductByName(name);
             if (items == null)
             {
-                _logger.LogError($"Products with 1002e   : {name} not found in data");
+                _logger.LogError($"Products with exter   : {name} not found in data");
                 return NotFound();
             }
             return Ok(items);
