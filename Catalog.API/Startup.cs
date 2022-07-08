@@ -1,5 +1,4 @@
 
-using AspNet.HealthChecks.UI.Client;
 using Catalog.API.Data;
 using Catalog.API.Data.Interfaces;
 using Catalog.API.Repositories;
